@@ -1,7 +1,21 @@
-﻿namespace car_dealership;
+﻿using car_dealership.Controllers;
+using car_dealership.Content;
+
+namespace car_dealership;
 
 internal class ManagementSystem
 {
+    private BuyerController BuyerController;
+    private CarController CarController;
+    private SellerController SellerController;
+
+    public ManagementSystem(BuyerController buyerController, CarController carController, SellerController sellerController)
+    {
+        BuyerController = buyerController;
+        CarController = carController;
+        SellerController = sellerController;
+    }
+
     public void Run()
     {
         while (true)
@@ -10,7 +24,6 @@ internal class ManagementSystem
             Console.WriteLine("======= Dealership System =======");
             Console.WriteLine("(1) - Menu Cliente");
             Console.WriteLine("(2) - Menu Funcionário");
-            Console.WriteLine("(3) - Cadastro");
             Console.WriteLine("(0) - Sair");
 
             Console.Write("Escolha uma opção: ");
@@ -19,13 +32,10 @@ internal class ManagementSystem
             switch (opcao)
             {
                 case "1":
-
+                    Client();
                     break;
                 case "2":
-
-                    break;
-                case "3":
-
+                    Employee();
                     break;
                 case "0":
                     Environment.Exit(0);
@@ -124,6 +134,41 @@ internal class ManagementSystem
 
     public void DataLoading()
     {
-
+        BuyerController.Buyers.Add(new Buyer(
+            1,
+            "Yuri",
+            1234567890,
+            "yuri@yuri.com"));
+        BuyerController.Buyers.Add(new Buyer(
+            2,
+            "Jade",
+            0987654321,
+            "jade@jade.com"));
+        CarController.Cars.Add(new Car(
+            1,
+            "Prisma",
+            Content.Enums.ECarManufacturer.Chevrolet,
+            2017,
+            124343,
+            35000m,
+            DateTime.Now));
+        CarController.Cars.Add(new Car(
+            2,
+            "Corolla",
+            Content.Enums.ECarManufacturer.Toyota,
+            2019,
+            20000,
+            85000m,
+            DateTime.Now));
+        SellerController.Sellers.Add(new Seller(
+            1,
+            "Steve",
+            24681012,
+            "steveseller@steveseller.com"));
+        SellerController.Sellers.Add(new Seller(
+            2,
+            "Drake",
+            135791113,
+            "drakeseller@drakeseller.com"));
     }
 }

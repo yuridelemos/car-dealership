@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\Balta\\car-dealership\\car-dealership.csproj",
+      "projectUniqueName": "C:\\dev\\car-dealership\\car-dealership.csproj",
       "projectName": "car-dealership",
-      "projectPath": "C:\\dev\\Balta\\car-dealership\\car-dealership.csproj",
+      "projectPath": "C:\\dev\\car-dealership\\car-dealership.csproj",
       "packagesPath": "C:\\Users\\Yuri\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\Balta\\car-dealership\\obj\\",
+      "outputPath": "C:\\dev\\car-dealership\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,7 @@
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
       },
       "frameworks": {
         "net8.0": {
@@ -66,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

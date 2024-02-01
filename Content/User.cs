@@ -1,6 +1,6 @@
 ﻿namespace car_dealership.Content;
 
-internal class User
+public class User
 {
     public User(int id, string name, long registerNumber, string email)
     {

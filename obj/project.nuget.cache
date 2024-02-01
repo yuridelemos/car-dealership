@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Xl9HN+b219rNseTdM3i+GAA7NU9YuPJ61fHFnuJ26eZeof1zlvoHrxbMPlWqmf/e+Ws4NjqPKLjVmxZxsincGA==",
+  "dgSpecHash": "BQEYDC8RmUVLf+Dh2s0/skCplPnjpJCRyyVKYib8ocvdbtJy14w6LyvWNJUfAWaY/VT2y3ba8G3OX4bUnalbcA==",
   "success": true,
-  "projectFilePath": "C:\\dev\\Balta\\car-dealership\\car-dealership.csproj",
+  "projectFilePath": "C:\\dev\\car-dealership\\car-dealership.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

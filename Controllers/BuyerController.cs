@@ -1,5 +1,12 @@
-﻿namespace car_dealership.Controllers;
+﻿using car_dealership.Content;
 
-internal class BuyerController : Controller
+namespace car_dealership.Controllers;
+
+internal class BuyerController : Controller<Buyer>
 {
+    internal List<Buyer> Buyers = new List<Buyer>();
+    public void Register() => base.Register(Buyers);
+    public void List() => base.List(Buyers);
+    public Buyer SelectItem() => base.SelectItem(Buyers);
+
 }

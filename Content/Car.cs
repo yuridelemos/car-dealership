@@ -2,20 +2,23 @@
 
 namespace car_dealership.Content;
 
-internal class Car
+public class Car
 {
-    public Car(string model, ECarManufacturer manufacturer, int year, long mileageDriven, decimal price)
+    public Car(int id, string name, ECarManufacturer manufacturer, int year, long mileageDriven, decimal price, DateTime purchaseDate)
     {
-        Model = model;
+        Id = id;
+        Name = name;
         Manufacturer = manufacturer;
         Year = year;
         MileageDriven = mileageDriven;
         Price = price;
+        PurchaseDate = purchaseDate;
     }
-
-    public string Model { get; set; }
+    public int Id { get; set; }
+    public string Name { get; set; }
     public ECarManufacturer Manufacturer { get; set; }
     public int Year { get; set; }
     public long MileageDriven { get; set; }
     public decimal Price { get; set; }
+    public DateTime PurchaseDate { get; set; }
 }
