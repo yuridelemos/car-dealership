@@ -1,5 +1,5 @@
-﻿using car_dealership.Controllers;
-using car_dealership.Content;
+﻿using car_dealership.Content;
+using car_dealership.Controllers;
 
 namespace car_dealership;
 
@@ -63,15 +63,15 @@ internal class ManagementSystem
             Console.WriteLine("(4) - Checar Agendamento");
 
             Console.Write("Escolha uma opção: ");
-            string opcao = Console.ReadLine();
+            string option = Console.ReadLine();
 
-            switch (opcao)
+            switch (option)
             {
                 case "1":
-
+                    CarController.Purchase(option);
                     break;
                 case "2":
-
+                    CarController.Purchase(option);
                     break;
                 case "3":
 

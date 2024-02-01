@@ -11,6 +11,5 @@ var managementSystem = new ManagementSystem(
     sellerController);
 
 managementSystem.DataLoading();
-//managementSystem.Run();
-carController.Purchase();
+managementSystem.Run();
 Console.ReadKey();

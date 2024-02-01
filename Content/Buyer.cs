@@ -6,6 +6,8 @@ public class Buyer : User
         : base(id, name, registerNumber, email)
     {
         Cars = new List<Car>();
+        Pieces = new List<CarPart>();
     }
     public List<Car> Cars { get; set; }
+    public List<CarPart> Pieces { get; set; }
 }
