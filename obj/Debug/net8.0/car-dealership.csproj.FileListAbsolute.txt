@@ -1,0 +1,15 @@
+C:\dev\car-dealership\bin\Debug\net8.0\car-dealership.exe
+C:\dev\car-dealership\bin\Debug\net8.0\car-dealership.deps.json
+C:\dev\car-dealership\bin\Debug\net8.0\car-dealership.runtimeconfig.json
+C:\dev\car-dealership\bin\Debug\net8.0\car-dealership.dll
+C:\dev\car-dealership\bin\Debug\net8.0\car-dealership.pdb
+C:\dev\car-dealership\obj\Debug\net8.0\car-dealership.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\car-dealership\obj\Debug\net8.0\car-dealership.AssemblyInfoInputs.cache
+C:\dev\car-dealership\obj\Debug\net8.0\car-dealership.AssemblyInfo.cs
+C:\dev\car-dealership\obj\Debug\net8.0\car-dealership.csproj.CoreCompileInputs.cache
+C:\dev\car-dealership\obj\Debug\net8.0\car-dealership.sourcelink.json
+C:\dev\car-dealership\obj\Debug\net8.0\car-dealership.dll
+C:\dev\car-dealership\obj\Debug\net8.0\refint\car-dealership.dll
+C:\dev\car-dealership\obj\Debug\net8.0\car-dealership.pdb
+C:\dev\car-dealership\obj\Debug\net8.0\car-dealership.genruntimeconfig.cache
+C:\dev\car-dealership\obj\Debug\net8.0\ref\car-dealership.dll

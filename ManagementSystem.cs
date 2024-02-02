@@ -7,12 +7,17 @@ internal class ManagementSystem
 {
     private BuyerController BuyerController;
     private CarController CarController;
+    private CarPartController CarPartController;
     private SellerController SellerController;
 
-    public ManagementSystem(BuyerController buyerController, CarController carController, SellerController sellerController)
+    public ManagementSystem(BuyerController buyerController,
+        CarController carController,
+        CarPartController carPartController,
+        SellerController sellerController)
     {
         BuyerController = buyerController;
         CarController = carController;
+        CarPartController = carPartController;
         SellerController = sellerController;
     }
 
@@ -68,10 +73,10 @@ internal class ManagementSystem
             switch (option)
             {
                 case "1":
-                    CarController.Purchase(option);
+                    CarController.Purchase();
                     break;
                 case "2":
-                    CarController.Purchase(option);
+                    CarPartController.Purchase();
                     break;
                 case "3":
 
@@ -159,6 +164,22 @@ internal class ManagementSystem
             2019,
             20000,
             85000m,
+            DateTime.Now));
+        CarPartController.Pieces.Add(new CarPart(
+            1,
+            "Correia dentada",
+            Content.Enums.ECarManufacturer.Chevrolet,
+            Content.Enums.ESparePart.GM,
+            2017,
+            150.2m,
+            DateTime.Now));
+        CarPartController.Pieces.Add(new CarPart(
+            2,
+            "Par de amortecedores",
+            Content.Enums.ECarManufacturer.Toyota,
+            Content.Enums.ESparePart.BOSCH,
+            2016,
+            850.2m,
             DateTime.Now));
         SellerController.Sellers.Add(new Seller(
             1,
