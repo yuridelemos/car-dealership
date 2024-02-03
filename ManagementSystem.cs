@@ -9,16 +9,19 @@ internal class ManagementSystem
     private CarController CarController;
     private CarPartController CarPartController;
     private SellerController SellerController;
+    private MaintenanceController MaintenanceController;
 
     public ManagementSystem(BuyerController buyerController,
         CarController carController,
         CarPartController carPartController,
-        SellerController sellerController)
+        SellerController sellerController,
+        MaintenanceController maintenanceController)
     {
         BuyerController = buyerController;
         CarController = carController;
         CarPartController = carPartController;
         SellerController = sellerController;
+        MaintenanceController = maintenanceController;
     }
 
     public void Run()

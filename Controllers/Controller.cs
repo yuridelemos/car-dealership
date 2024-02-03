@@ -29,7 +29,7 @@ abstract class Controller<T>
     public T SelectItem(List<T> items)
     {
         Thread.Sleep(200);
-        Console.Clear();
+        //Console.Clear();
         Console.WriteLine($"======= Seleção de {typeof(T).Name} =======");
         List(items);
         Console.Write($"Selecione o(a) {typeof(T).Name} que deseja: ");

@@ -16,7 +16,7 @@ internal class CarPartController : Controller<CarPart>
         SellerController = sellerController;
     }
 
-    internal void Register() => base.List(Pieces);
+    internal void Register() => base.Register(Pieces);
     internal void List() => base.List(Pieces);
     internal CarPart SelectItem() => base.SelectItem(Pieces);
 
