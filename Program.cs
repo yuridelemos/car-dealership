@@ -5,13 +5,19 @@ BuyerController buyerController = new BuyerController();
 SellerController sellerController = new SellerController();
 CarController carController = new CarController(buyerController, sellerController);
 CarPartController carPartController = new CarPartController(buyerController, sellerController);
+MaintenanceController maintenanceController = new MaintenanceController(buyerController);
 
 var managementSystem = new ManagementSystem(
     buyerController,
     carController,
     carPartController,
-    sellerController);
+    sellerController,
+    maintenanceController);
 
 managementSystem.DataLoading();
+carController.Purchase();
+carController.Purchase();
+maintenanceController.Register();
+maintenanceController.List();
 managementSystem.Run();
 Console.ReadKey();
