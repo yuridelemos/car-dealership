@@ -22,25 +22,22 @@ internal class MaintenanceController
             Thread.Sleep(2000);
             Console.WriteLine("Data e hora agendada: " + scheduledDate.ToString("dd/MM/yyyy HH:mm"));
             var buyer = BuyerController.SelectItem();
+            var car = BuyerController.SelectCar(buyer);
             Console.WriteLine("\nPressione qualquer tecla para continuar.");
             Console.ReadKey();
-            var maintenance = new Maintenance(scheduledDate, buyer);
+            var maintenance = new Maintenance(scheduledDate, buyer, car);
             Maintenances.Add(maintenance);
         }
         else
             Console.WriteLine("Formato inválido. Certifique-se de usar o formato DD/MM/AAAA HH:mm.");
-        // Criar a escolha de carro se a pessoa tiver mais de um
     }
     public void List()
     {
         foreach (var item in Maintenances)
         {
-            Console.WriteLine($"A manutenção de {item.Client.Name} está agendada para {item.ScheduledDate}");
+            Console.WriteLine($"{item.Car.Name} de {item.Client.Name} está agendado para {item.ScheduledDate}");
         }
         Console.WriteLine("\nPressione qualquer tecla para continuar.");
         Console.ReadKey();
-        // Criar um foreach que pegue Maintenences e escreva o nome de quem agendou e o carro
     }
-
-    // Criar um método para checar a agenda
 }

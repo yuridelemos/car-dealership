@@ -82,10 +82,10 @@ internal class ManagementSystem
                     CarPartController.Purchase();
                     break;
                 case "3":
-
+                    MaintenanceController.Register();
                     break;
                 case "4":
-
+                    MaintenanceController.List();
                     break;
                 case "0":
                     Environment.Exit(0);

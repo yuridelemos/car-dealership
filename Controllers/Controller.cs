@@ -22,7 +22,8 @@ abstract class Controller<T>
     }
     public void List(List<T> items) =>
         items
-            .Select((item, index) => $"({index + 1}) - {item.GetType().GetProperty("Name").GetValue(item)}")
+            .Select((item) => $"({item.GetType().GetProperty("Id").GetValue(item)}) " +
+            $"- {item.GetType().GetProperty("Name").GetValue(item)}")
             .ToList()
             .ForEach(Console.WriteLine);
 
