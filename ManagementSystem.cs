@@ -116,16 +116,16 @@ internal class ManagementSystem
             switch (opcao)
             {
                 case "1":
-
+                    CarController.Purchase();
                     break;
                 case "2":
-
+                    CarPartController.Purchase();
                     break;
                 case "3":
-
+                    CarPartController.List();
                     break;
                 case "4":
-
+                    SellerController.SalesCommission();
                     break;
                 case "0":
                     Environment.Exit(0);
