@@ -33,11 +33,10 @@ internal class MaintenanceController
     }
     public void List()
     {
+        // Criar método de mostrar apenas o cliente que o nome for compatível
         foreach (var item in Maintenances)
         {
             Console.WriteLine($"{item.Car.Name} de {item.Client.Name} está agendado para {item.ScheduledDate}");
         }
-        Console.WriteLine("\nPressione qualquer tecla para continuar.");
-        Console.ReadKey();
     }
 }
