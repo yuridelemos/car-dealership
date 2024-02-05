@@ -11,9 +11,10 @@ internal class BuyerController : Controller<Buyer>
 
     public void List(Buyer items) =>
     items.Cars
-        .Select((item, index) => $"({index + 1}) - {item.GetType().GetProperty("Name").GetValue(item)}")
-        .ToList()
-        .ForEach(Console.WriteLine);
+            .Select((item) => $"({item.GetType().GetProperty("Id").GetValue(item)}) " +
+            $"- {item.GetType().GetProperty("Name").GetValue(item)}")
+            .ToList()
+            .ForEach(Console.WriteLine);
 
     public Car SelectCar(Buyer buyer)
     {

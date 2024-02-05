@@ -15,10 +15,5 @@ var managementSystem = new ManagementSystem(
     maintenanceController);
 
 managementSystem.DataLoading();
-carController.Purchase();
-carController.Purchase();
-carPartController.Purchase();
-carPartController.Purchase();
-sellerController.SalesCommission();
 managementSystem.Run();
 Console.ReadKey();

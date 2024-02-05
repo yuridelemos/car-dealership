@@ -30,8 +30,9 @@ internal class ManagementSystem
         {
             Console.Clear();
             Console.WriteLine("======= Dealership System =======");
-            Console.WriteLine("(1) - Menu Cliente");
-            Console.WriteLine("(2) - Menu Funcionário");
+            Console.WriteLine("(1) - Cadastro");
+            Console.WriteLine("(2) - Menu Cliente");
+            Console.WriteLine("(3) - Menu Funcionário");
             Console.WriteLine("(0) - Sair");
 
             Console.Write("Escolha uma opção: ");
@@ -40,9 +41,12 @@ internal class ManagementSystem
             switch (opcao)
             {
                 case "1":
-                    Client();
+                    Register();
                     break;
                 case "2":
+                    Client();
+                    break;
+                case "3":
                     Employee();
                     break;
                 case "0":
@@ -58,7 +62,47 @@ internal class ManagementSystem
         }
 
     }
+    private void Register()
+    {
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("======= Menu de Registro =======");
+            Console.WriteLine("(1) - Registro de Cliente");
+            Console.WriteLine("(2) - Registro de Vendedor");
+            Console.WriteLine("(3) - Registro de Carro");
+            Console.WriteLine("(4) - Registro de Peça");
+            Console.WriteLine("(0) - Voltar");
 
+            Console.Write("Escolha uma opção: ");
+            string opcao = Console.ReadLine();
+
+            switch (opcao)
+            {
+                case "1":
+                    BuyerController.Register();
+                    break;
+                case "2":
+                    SellerController.Register();
+                    break;
+                case "3":
+                    CarController.Register();
+                    break;
+                case "4":
+                    CarPartController.Register();
+                    break;
+                case "0":
+                    Run();
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida. Tente novamente.");
+                    break;
+            }
+            Console.WriteLine();
+            Console.WriteLine("Pressione qualquer tecla para continuar...");
+            Console.ReadKey();
+        }
+    }
     private void Client()
     {
         while (true)
@@ -69,6 +113,7 @@ internal class ManagementSystem
             Console.WriteLine("(2) - Comprar Peça");
             Console.WriteLine("(3) - Agendar Manutenção");
             Console.WriteLine("(4) - Checar Agendamento");
+            Console.WriteLine("(0) - Voltar");
 
             Console.Write("Escolha uma opção: ");
             string option = Console.ReadLine();
@@ -88,7 +133,7 @@ internal class ManagementSystem
                     MaintenanceController.List();
                     break;
                 case "0":
-                    Environment.Exit(0);
+                    Run();
                     break;
                 default:
                     Console.WriteLine("Opção inválida. Tente novamente.");
@@ -109,6 +154,7 @@ internal class ManagementSystem
             Console.WriteLine("(2) - Venda de Peça");
             Console.WriteLine("(3) - Checar estoque");
             Console.WriteLine("(4) - Comissões a receber");
+            Console.WriteLine("(0) - Voltar");
 
             Console.Write("Escolha uma opção: ");
             string opcao = Console.ReadLine();
@@ -128,7 +174,7 @@ internal class ManagementSystem
                     SellerController.SalesCommission();
                     break;
                 case "0":
-                    Environment.Exit(0);
+                    Run();
                     break;
                 default:
                     Console.WriteLine("Opção inválida. Tente novamente.");
@@ -139,7 +185,6 @@ internal class ManagementSystem
             Console.ReadKey();
         }
     }
-
     public void DataLoading()
     {
         BuyerController.Buyers.Add(new Buyer(
